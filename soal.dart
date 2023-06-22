@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class soal {
   // 1. Buatlah sebuah program Dart yang mencetak angka 1 hingga 10.
   // cara 1:
@@ -5,5 +7,26 @@ class soal {
     for (int i = 1; i <= 10; i++) {
       print(i);
     }
+  }
+
+  // 2.Buatlah program Dart untuk menghitung dan mencetak hasil penjumlahan, pengurangan, perkalian, dan pembagian dari dua angka yang diinputkan oleh pengguna.
+  void soal2() {
+    print("enter your num 1");
+    var num1 = stdin.readLineSync();
+    print("enter your num 2");
+    var num2 = stdin.readLineSync();
+
+    // penjumalahan
+    var totalSum = int.parse(num1!) + int.parse(num2!);
+    print("Total Sum : ${totalSum}");
+    //pengurangan
+    var reductionResult = int.parse(num1) - int.parse(num2);
+    print("Reduction Result : ${reductionResult}");
+    // perkalian
+    var multiplicationResult = int.parse(num1) * int.parse(num2);
+    print("multiplication Result : ${multiplicationResult}");
+    // pembagian
+    var distributionResult = int.parse(num1) / int.parse(num2);
+    print("distribution Result : ${distributionResult}");
   }
 }
