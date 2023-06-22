@@ -29,4 +29,19 @@ class soal {
     var distributionResult = int.parse(num1) / int.parse(num2);
     print("distribution Result : ${distributionResult}");
   }
+
+  // 3.Buatlah program Dart untuk menentukan apakah suatu angka yang diinputkan oleh pengguna merupakan bilangan ganjil atau genap.
+  soal3() {
+    stdout.write('Enter the number you checked:');
+    var input = stdin.readLineSync();
+
+    // if (int.parse(input!) % 2 == 0) {
+    //   print("the number you entered is positive");
+    // } else {
+    //   print("the number you entered is negative");
+    // }
+    int.parse(input!) % 2 == 0
+        ? print("the number you enteres is positive")
+        : print("the number you enteres is negative");
+  }
 }
