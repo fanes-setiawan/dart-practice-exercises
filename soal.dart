@@ -35,13 +35,43 @@ class soal {
     stdout.write('Enter the number you checked:');
     var input = stdin.readLineSync();
 
-    // if (int.parse(input!) % 2 == 0) {
-    //   print("the number you entered is positive");
-    // } else {
-    //   print("the number you entered is negative");
-    // }
+    // cara1
+    if (int.parse(input!) % 2 == 0) {
+      print("the number you entered is positive");
+    } else {
+      print("the number you entered is negative");
+    }
+    // cara2
     int.parse(input!) % 2 == 0
         ? print("the number you enteres is positive")
         : print("the number you enteres is negative");
+  }
+
+  // 4.Buatlah program Dart untuk menghitung jumlah kata dalam sebuah kalimat yang diinputkan oleh pengguna.
+  soal4() {
+    stdout.write("enter your text: ");
+    var text = stdin.readLineSync();
+    List textList = [];
+    String kata = "";
+
+    // cara 1:
+    for (int i = 0; i < text!.length; i++) {
+      if (text[i] != " ") {
+        kata += text[i];
+      } else {
+        if (kata.isNotEmpty) {
+          textList.add(kata);
+          kata = "";
+        }
+      }
+    }
+    if (kata.isNotEmpty) {
+      textList.add(kata);
+    }
+    print(textList.length);
+
+    // cara 2:
+    final splitted = text!.split(" ");
+    print(splitted.length);
   }
 }
