@@ -6,4 +6,5 @@ void main() {
   soal().soal3();
   soal().soal4();
   soal().soal5();
+  soal().soal6();
 }

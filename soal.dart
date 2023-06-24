@@ -88,4 +88,42 @@ class soal {
     }
     print(faktorial);
   }
+
+  // 6. Buatlah program Dart untuk mencari nilai terbesar dan terkecil dari sebuah array bilangan yang diinputkan oleh pengguna.
+  soal6() {
+    stdout.write("enter your number:");
+    var input = stdin.readLineSync();
+
+    var inputList = input!.split(" ").map(int.parse).toList();
+    print(inputList);
+
+    // cara 1
+    var minNum = inputList[0];
+    var maxNum = inputList[0];
+
+    for (int i = 0; i < inputList.length; i++) {
+      if (minNum < inputList[i]) {
+        minNum = inputList[i];
+      }
+      if (maxNum > inputList[i]) {
+        maxNum = inputList[i];
+      }
+    }
+    print("minNum: $minNum");
+    print("maxNum: $maxNum");
+
+    // cara 2
+    for (int i = 0; i < inputList.length - 1; i++) {
+      for (int j = 0; j < inputList.length; j++) {
+        if (inputList[j] > inputList[i]) {
+          int temp = inputList[i];
+          inputList[i] = inputList[j];
+          inputList[j] = temp;
+        }
+      }
+    }
+    print(inputList);
+    print("min : ${inputList[0]}");
+    print("max : ${inputList[inputList.length - 1]}");
+  }
 }
