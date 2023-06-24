@@ -42,7 +42,7 @@ class soal {
       print("the number you entered is negative");
     }
     // cara2
-    int.parse(input!) % 2 == 0
+    int.parse(input) % 2 == 0
         ? print("the number you enteres is positive")
         : print("the number you enteres is negative");
   }
@@ -71,7 +71,21 @@ class soal {
     print(textList.length);
 
     // cara 2:
-    final splitted = text!.split(" ");
+    final splitted = text.split(" ");
     print(splitted.length);
+  }
+
+  // 5.Buatlah program Dart untuk menghitung faktorial dari sebuah bilangan yang diinputkan oleh pengguna.
+  soal5() {
+    stdout.write("enter your number:");
+    var num = stdin.readLineSync();
+
+    // cara 1
+    int faktorial = 1;
+
+    for (int i = 1; i <= int.parse(num!); i++) {
+      faktorial *= i;
+    }
+    print(faktorial);
   }
 }

@@ -5,4 +5,5 @@ void main() {
   soal().soal2();
   soal().soal3();
   soal().soal4();
+  soal().soal5();
 }
