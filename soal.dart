@@ -126,4 +126,24 @@ class soal {
     print("min : ${inputList[0]}");
     print("max : ${inputList[inputList.length - 1]}");
   }
+
+  // 7.Buatlah program Dart untuk menghitung total harga belanjaan dengan diskon.
+  //Program harus meminta pengguna untuk memasukkan harga belanjaan dan persentase
+  //diskon yang diberikan. Setelah itu, program harus menghitung total harga setelah diskon dan mencetaknya.
+
+  soal7() {
+    // cara 1
+    List<int> price = [12000, 30000, 4500];
+    int disk = 5;
+    double totalPrice = 0;
+    double totalDisk = 0;
+
+    for (int i = 0; i < price.length; i++) {
+      totalPrice = totalPrice + price[i];
+    }
+    totalDisk = totalPrice * (disk / 100);
+    print("Total belanja  :Rp $totalPrice");
+    print("Disk belanja   : $disk % atau $totalDisk");
+    print("Bayar          :Rp ${totalPrice - totalDisk}");
+  }
 }
