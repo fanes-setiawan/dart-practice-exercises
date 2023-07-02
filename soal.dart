@@ -145,5 +145,36 @@ class soal {
     print("Total belanja  :Rp $totalPrice");
     print("Disk belanja   : $disk % atau $totalDisk");
     print("Bayar          :Rp ${totalPrice - totalDisk}");
+
+    // cara 2
+    List belanja = [];
+    bool addShopping = true;
+    double totalP = 0;
+    double? diskons;
+    double pay;
+
+    while (addShopping) {
+      stdout.write("Add product? (y/t): ");
+      var condition = stdin.readLineSync();
+      if (condition!.toLowerCase() == "y") {
+        stdout.write("add price : ");
+        var priceProduct = stdin.readLineSync();
+        belanja.add(double.parse(priceProduct!));
+      } else {
+        addShopping = false;
+        if (belanja.length >= 5) {
+          stdout.write("add diskcount : ");
+          var diskon = stdin.readLineSync();
+          diskons = double.parse(diskon!);
+        }
+      }
+    }
+    print(diskons);
+    for (int j = 0; j < belanja.length; j++) {
+      totalP = totalP + belanja[j];
+    }
+    pay = totalP - (totalP * diskons! / 100);
+    print("price shopping: $belanja");
+    print("total pay : $pay!");
   }
 }
