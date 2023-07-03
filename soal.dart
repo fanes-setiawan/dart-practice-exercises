@@ -177,4 +177,18 @@ class soal {
     print("price shopping: $belanja");
     print("total pay : $pay!");
   }
+
+  // 8. buatkan fungsi untuk mengubah nilai double menjadi format uang ruapiah
+  soal8() {
+    stdout.write("enter a monetary value: ");
+    var money = stdin.readLineSync();
+    int value = int.parse(money!);
+
+    // cara 1
+    String formattedRp = 'Rp ${value.toStringAsFixed(0).replaceAllMapped(
+          RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+          (Match m) => '${m[1]}.',
+        )}';
+    print(formattedRp);
+  }
 }

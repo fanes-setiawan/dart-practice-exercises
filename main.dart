@@ -8,4 +8,5 @@ void main() {
   soal().soal5();
   soal().soal6();
   soal().soal7();
+  soal().soal8();
 }
