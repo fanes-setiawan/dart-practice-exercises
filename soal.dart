@@ -191,4 +191,21 @@ class soal {
         )}';
     print(formattedRp);
   }
+
+  // 9. Buatlah sebuah fungsi Dart untuk membalikkan urutan karakter dalam sebuah string.
+  soal9() {
+    // cara 1
+    stdout.write("enter your text: ");
+    var chat = stdin.readLineSync();
+    String output = '';
+
+    for (int j = chat!.length - 1; j >= 0; j--) {
+      output = output + chat[j];
+    }
+    print(output);
+
+    // cara 2
+    String refersed = chat.split('').reversed.join('');
+    print(refersed);
+  }
 }
