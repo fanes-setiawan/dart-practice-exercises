@@ -208,4 +208,30 @@ class soal {
     String refersed = chat.split('').reversed.join('');
     print(refersed);
   }
+
+  /* 
+  10. Buatlah sebuah program Dart untuk mengecek apakah suatu kata atau kalimat 
+  adalah palindrom. Sebuah palindrom adalah kata atau kalimat yang dapat dibaca 
+  dengan sama baik dari depan maupun dari belakang.
+  */
+
+  soal10() {
+    stdout.write("enter word : ");
+    var word = stdin.readLineSync();
+    String words = '';
+
+    // cara 1
+    for (int x = word!.length - 1; x >= 0; x--) {
+      words = words + word[x];
+    }
+    if (words == word) {
+      print("ini kata palindrom");
+    } else {
+      print("ini bukan kata palindrom");
+    }
+
+    // cara 2
+    String _word = word.split('').reversed.join('');
+    _word == word ? print("true") : print("false");
+  }
 }
